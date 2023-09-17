@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:text_similarity/automaton/levenshtein_automaton.dart';
+import 'package:text_similarity/text_similarity.dart';
 
 void main() {
   group('String "word" with distance 2', () {

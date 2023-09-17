@@ -37,10 +37,10 @@ packages:
     dependency: "direct main"
     description:
       name: automata_theory
-      sha256: "0a99c6eaf3bb451d6c7621528e822f422625b17938f5070fc2d0a270f3ea75ab"
+      sha256: "6f116a0be8b3b728454d8b3e49f17bff198386d9f19b328a17f976c556aea3d7"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   boolean_selector:
     dependency: transitive
     description:
