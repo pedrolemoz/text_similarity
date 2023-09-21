@@ -3,7 +3,7 @@ import '../automaton/levenshtein_automaton.dart';
 class TextSimilarity {
   const TextSimilarity();
 
-  Set<String> getSimilarStrings({
+  Set<String> similarities({
     required String input,
     required List<String> candidates,
     int distance = 1,

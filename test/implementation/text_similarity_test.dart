@@ -63,20 +63,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "l" using distance 1',
           () {
-            final similarCommands = 'l'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'ls'});
+            final similatiries = 'l'.similarities(candidates: commands);
+            expect(similatiries, {'ls'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "l" using distance 2',
           () {
-            final similarCommands = 'l'.getSimilarStrings(
+            final similatiries = 'l'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'ls', 'cd', 'mv', 'cp', 'rm', 'ps', 'df', 'cal', 'dd'},
             );
           },
@@ -85,21 +85,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "ls" using distance 1',
           () {
-            final similarCommands =
-                'ls'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'ls', 'ps'});
+            final similatiries = 'ls'.similarities(candidates: commands);
+            expect(similatiries, {'ls', 'ps'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "ls" using distance 2',
           () {
-            final similarCommands = 'ls'.getSimilarStrings(
+            final similatiries = 'ls'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'ls', 'cd', 'mv', 'cp', 'rm', 'less', 'ssh', 'ps', 'df', 'dd'},
             );
           },
@@ -110,20 +109,20 @@ void main() {
         test(
           'Should return the expected Set<String> hen the command is "c" using distance 1',
           () {
-            final similarCommands = 'c'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'cd', 'cp'});
+            final similatiries = 'c'.similarities(candidates: commands);
+            expect(similatiries, {'cd', 'cp'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "c" using distance 2',
           () {
-            final similarCommands = 'c'.getSimilarStrings(
+            final similatiries = 'c'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {
                 'ls',
                 'cd',
@@ -144,21 +143,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "ca" using distance 1',
           () {
-            final similarCommands =
-                'ca'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'cd', 'cp', 'cat', 'cal'});
+            final similatiries = 'ca'.similarities(candidates: commands);
+            expect(similatiries, {'cd', 'cp', 'cat', 'cal'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "ca" using distance 2',
           () {
-            final similarCommands = 'ca'.getSimilarStrings(
+            final similatiries = 'ca'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {
                 'ls',
                 'cd',
@@ -181,21 +179,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "cat" using distance 1',
           () {
-            final similarCommands =
-                'cat'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'cat', 'cal'});
+            final similatiries = 'cat'.similarities(candidates: commands);
+            expect(similatiries, {'cat', 'cal'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "cat" using distance 2',
           () {
-            final similarCommands = 'cat'.getSimilarStrings(
+            final similatiries = 'cat'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'cd', 'cp', 'cat', 'man', 'tar', 'cmp', 'cal'},
             );
           },
@@ -206,20 +203,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "m" using distance 1',
           () {
-            final similarCommands = 'm'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'mv', 'rm'});
+            final similatiries = 'm'.similarities(candidates: commands);
+            expect(similatiries, {'mv', 'rm'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "m" using distance 2',
           () {
-            final similarCommands = 'm'.getSimilarStrings(
+            final similatiries = 'm'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'ls', 'cd', 'mv', 'cp', 'rm', 'man', 'cmp', 'ps', 'df', 'dd'},
             );
           },
@@ -228,21 +225,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "mk" using distance 1',
           () {
-            final similarCommands =
-                'mk'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'mv'});
+            final similatiries = 'mk'.similarities(candidates: commands);
+            expect(similatiries, {'mv'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "mk" using distance 2',
           () {
-            final similarCommands = 'mk'.getSimilarStrings(
+            final similatiries = 'mk'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'ls', 'cd', 'mv', 'cp', 'rm', 'man', 'cmp', 'ps', 'df', 'dd'},
             );
           },
@@ -251,21 +247,20 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "mkd" using distance 1',
           () {
-            final similarCommands =
-                'mkd'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, <String>{});
+            final similatiries = 'mkd'.similarities(candidates: commands);
+            expect(similatiries, <String>{});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "mkd" using distance 2',
           () {
-            final similarCommands = 'mkd'.getSimilarStrings(
+            final similatiries = 'mkd'.similarities(
               candidates: commands,
               distance: 2,
             );
             expect(
-              similarCommands,
+              similatiries,
               {'pwd', 'cd', 'mkdir', 'mv', 'man', 'dd'},
             );
           },
@@ -274,40 +269,38 @@ void main() {
         test(
           'Should return the expected Set<String> when the command is "mkdi" using distance 1',
           () {
-            final similarCommands =
-                'mkdi'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'mkdir'});
+            final similatiries = 'mkdi'.similarities(candidates: commands);
+            expect(similatiries, {'mkdir'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "mkdi" using distance 2',
           () {
-            final similarCommands = 'mkdi'.getSimilarStrings(
+            final similatiries = 'mkdi'.similarities(
               candidates: commands,
               distance: 2,
             );
-            expect(similarCommands, {'mkdir'});
+            expect(similatiries, {'mkdir'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "mkdir" using distance 1',
           () {
-            final similarCommands =
-                'mkdir'.getSimilarStrings(candidates: commands);
-            expect(similarCommands, {'mkdir'});
+            final similatiries = 'mkdir'.similarities(candidates: commands);
+            expect(similatiries, {'mkdir'});
           },
         );
 
         test(
           'Should return the expected Set<String> when the command is "mkdir" using distance 2',
           () {
-            final similarCommands = 'mkdir'.getSimilarStrings(
+            final similatiries = 'mkdir'.similarities(
               candidates: commands,
               distance: 2,
             );
-            expect(similarCommands, {'mkdir'});
+            expect(similatiries, {'mkdir'});
           },
         );
       });
@@ -343,97 +336,95 @@ void main() {
       test(
         'Should return the expected Set<String> when the command is "c" using distance 1',
         () {
-          final similarCommands = 'c'.getSimilarStrings(candidates: commands);
-          expect(similarCommands, <String>{});
+          final similatiries = 'c'.similarities(candidates: commands);
+          expect(similatiries, <String>{});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "c" using distance 2',
         () {
-          final similarCommands = 'c'.getSimilarStrings(
+          final similatiries = 'c'.similarities(
             candidates: commands,
             distance: 2,
           );
-          expect(similarCommands, {'mv', 'rm'});
+          expect(similatiries, {'mv', 'rm'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "cl" using distance 1',
         () {
-          final similarCommands = 'cl'.getSimilarStrings(candidates: commands);
-          expect(similarCommands, <String>{});
+          final similatiries = 'cl'.similarities(candidates: commands);
+          expect(similatiries, <String>{});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "cl" using distance 2',
         () {
-          final similarCommands = 'cl'.getSimilarStrings(
+          final similatiries = 'cl'.similarities(
             candidates: commands,
             distance: 2,
           );
-          expect(similarCommands, {'mv', 'rm'});
+          expect(similatiries, {'mv', 'rm'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clo" using distance 1',
         () {
-          final similarCommands = 'clo'.getSimilarStrings(candidates: commands);
-          expect(similarCommands, <String>{});
+          final similatiries = 'clo'.similarities(candidates: commands);
+          expect(similatiries, <String>{});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clo" using distance 2',
         () {
-          final similarCommands = 'clo'.getSimilarStrings(
+          final similatiries = 'clo'.similarities(
             candidates: commands,
             distance: 2,
           );
-          expect(similarCommands, {'clone', 'log'});
+          expect(similatiries, {'clone', 'log'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clon" using distance 1',
         () {
-          final similarCommands =
-              'clon'.getSimilarStrings(candidates: commands);
-          expect(similarCommands, {'clone'});
+          final similatiries = 'clon'.similarities(candidates: commands);
+          expect(similatiries, {'clone'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clon" using distance 2',
         () {
-          final similarCommands = 'clon'.getSimilarStrings(
+          final similatiries = 'clon'.similarities(
             candidates: commands,
             distance: 2,
           );
-          expect(similarCommands, {'clone', 'log'});
+          expect(similatiries, {'clone', 'log'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clone" using distance 1',
         () {
-          final similarCommands =
-              'clone'.getSimilarStrings(candidates: commands);
-          expect(similarCommands, {'clone'});
+          final similatiries = 'clone'.similarities(candidates: commands);
+          expect(similatiries, {'clone'});
         },
       );
 
       test(
         'Should return the expected Set<String> when the command is "clone" using distance 2',
         () {
-          final similarCommands = 'clone'.getSimilarStrings(
+          final similatiries = 'clone'.similarities(
             candidates: commands,
             distance: 2,
           );
-          expect(similarCommands, {'clone'});
+          expect(similatiries, {'clone'});
         },
       );
     });
