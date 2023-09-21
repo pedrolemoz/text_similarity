@@ -20,7 +20,7 @@ In this example, Σ (sigma) represents any symbol from the current alphabet, and
 
 ## Usage
 
-You are able to instatiate the `TextSimilarity` class directly, but there is an extension applied on `String` to reduce boilerplate:
+You are able to instantiate the `TextSimilarity` class directly, but there is an extension applied on `String` to reduce boilerplate:
 
 ```dart
 void main() {
