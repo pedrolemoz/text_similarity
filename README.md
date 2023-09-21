@@ -18,6 +18,48 @@ For example, consider the following automaton constructed from the string "WORLD
 
 In this example, Σ (sigma) represents any symbol from the current alphabet, and ε (epsilon) represents any symbol from any alphabet (including whitespaces). Note that the strings "WORD", "WOD", "WOOD" and "WORLD" are accepted by the automaton, since the maximum distance (`n`) is 2.
 
+## Usage
+
+You are able to instatiate the `TextSimilarity` class directly, but there is an extension applied on `String` to reduce boilerplate:
+
+```dart
+void main() {
+  final textSimilarity = TextSimilarity();
+
+  final results = textSimilarity.similarities(
+    input: 'maçã',
+    distance: 2,
+    candidates: ['maca', 'massa', 'mapa', 'faca'],
+  );
+
+  print(results); // {maca, mapa}
+}
+```
+
+or
+
+```dart
+void main() {
+  final results = 'maçã'.similarities(
+    distance: 2,
+    candidates: ['maca', 'massa', 'mapa', 'faca'],
+  );
+
+  print(results); // {maca, mapa}
+}
+```
+
+Futhermore, if you are interested in the generated Levenshtein's Automaton, you can use the `LevenshteinAutomaton` class to instatiate your own automaton:
+
+```dart
+void main() {
+  final automaton = LevenshteinAutomaton(input: 'maçã', distance: 2);
+  
+  print(automaton.evaluate('mapa')); // true
+  print(automaton.evaluate('faca')); // false
+}
+```
+
 ## Possible applications
 
 With Levenshtein's Automaton, you can:
