@@ -1,7 +1,7 @@
 name: text_similarity
 description: Implementation of Levenshtein's Automaton to find similarities between a String and a set of known words.
 repository: https://github.com/pedrolemoz/text_similarity
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: ^3.1.2
