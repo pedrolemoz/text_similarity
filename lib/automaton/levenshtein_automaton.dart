@@ -1,5 +1,6 @@
 import 'package:automata_theory/automatons.dart';
 
+/// Implementation of Levenshtein's Automaton.
 class LevenshteinAutomaton {
   late EpsilonNFA _eNFA;
   final Set<String>? customAlphabet;
@@ -12,6 +13,7 @@ class LevenshteinAutomaton {
     _eNFA = _generateAutomaton(input, distance);
   }
 
+  /// This method returns `true` or `false` if the input is accepted by the generated Levenshtein's Automaton.
   bool evaluate(String input) => _eNFA.evaluate(input);
 
   EpsilonNFA _generateAutomaton(String input, int distance) {
