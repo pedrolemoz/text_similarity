@@ -1,5 +1,6 @@
 name: text_similarity
 description: Text Similarity
+repository: https://github.com/pedrolemoz/text_similarity
 version: 1.0.0
 
 environment:
